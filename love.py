@@ -1,9 +1,9 @@
 import torch
+import transformers
+import numpy as np
+import re
 
-# Check if MPS is available
-if torch.backends.mps.is_available():
-    device = torch.device("mps")
-else:
-    device = torch.device("cpu")
+model_id = "meta-llama/Meta-Llama-3-8B"
+pipeline = transformers.pipeline("text-generation", model=model_id, model_kwargs={"torch_dtype": torch.bfloat16}, device_map="auto")
 
-print(f"Using device: {device}")
+pipeline("Hey how are you doing today?")
