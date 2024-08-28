@@ -101,4 +101,3 @@ model = tf.keras.Sequential([
 model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 model.fit(scaled_data, labels, epochs=10, batch_size=1)
 
-# Normalization: Normalize your data to make sure all features contribute equally to the model.
