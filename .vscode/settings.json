@@ -1,0 +1,4 @@
+{
+  "python.defaultInterpreterPath": "/opt/homebrew/Caskroom/miniconda/base/envs/pytorch_env/bin/python",
+  "python.pythonPath": "/opt/homebrew/Caskroom/miniconda/base/envs/pytorch_env/bin/python"
+}
