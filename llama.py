@@ -25,3 +25,14 @@ training_args = TrainingArguments(
   eval_steps=500,
 )
 
+trainer = Trainer(
+  model=model,
+  args=training_args,
+  train_dataset=tokenized_datasets["train"],
+  eval_dataset=tokenized_datasets["test"],
+)
+
+trainer.train()
+
+model.save_pretrained("./results")
+tokenizer.save_pretrained("./results")
