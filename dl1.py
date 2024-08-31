@@ -32,3 +32,19 @@ print(p)
 my_list = [0, 1, 2, 3, 4, 5]
 
 print(my_list[1:3])
+
+# slice from start and everything prior to index 3
+print(my_list[:3])
+
+print(my_list[3:])
+
+print(my_list[:])
+
+# leaves off the last index
+print(my_list[:-1])
+print(my_list[:-3])
+
+print(my_list[::-1])
+
+array_1d = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+print(array_1d[2:6])
