@@ -27,3 +27,13 @@ z = np.maximum(z, 0.)
 
 t0 = time.time()
 
+for _ in range(1000):
+  z = x + y
+  z = np.maximum(z, 0.)
+print("Took: {0:.2f} s".format(time.time() - t0))
+
+t0 = time.time()
+for _ in range(1000):
+ z = naive_add(x, y)
+ z = naive_relu(z)
+print("Took: {0:.2f} s".format(time.time() - t0))
