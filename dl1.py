@@ -24,3 +24,11 @@ d = np.array([[[5, 78, 2, 34, 0],
 
 # this will give a tuple that discribes the shape of the tensor
 a.shape
+
+t = 10
+p = t
+print(p)
+
+my_list = [0, 1, 2, 3, 4, 5]
+
+print(my_list[1:3])
