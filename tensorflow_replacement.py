@@ -1,4 +1,5 @@
 import tensorflow as tf
+import numpy as np
 mnist = tf.keras.datasets.mnist
 (train_images, train_labels), (test_images, test_labels) = mnist.load_data()
 
@@ -89,3 +90,9 @@ def fit(model, images, labels, epochs, batch_size=128):
         print(f"loss at batch {batch_counter}: {loss:.2f}")
 
 fit(model, train_images, train_labels, epochs=10, batch_size=128)
+
+predictions = model(test_images)
+predictions = predictions.numpy()
+predicted_labels = np.argmax(predictions, axis=1)
+matches = predicted_labels == test_labels
+print(f"accuracy: {matches.mean():.2f}")
