@@ -26,3 +26,14 @@ Ctrl-u: Cut text from beginning of line to cursor
 Ctrl-p: Access previous command in history
 Ctrl-n: Access next command in history
 Ctrl-r Reverse-search through command history
+
+```ipython
+%timeit L = [n ** 2 for n in range(1000)]
+```
+
+```ipython
+%%timeit
+L = []
+for n in range(1000):
+  L.append(n ** 2)
+```
