@@ -1,5 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
+import tensorflow as tf
 
 num_samples_per_class = 1000
 negative_samples = np.random.multivariate_normal(
@@ -15,3 +16,11 @@ targets = np.vstack((np.zeros((num_samples_per_class, 1), dtype="float32"),
 
 plt.scatter(inputs[:, 0], inputs[:, 1], c=targets[:, 0])
 plt.show()
+
+input_dim = 2
+output_dim = 1
+W = tf.Variable(initial_value=tf.random.normal(shape=(input_dim, output_dim)))
+b = tf.Variable(initial_value=tf.zeros(shape=(output_dim,)))
+
+def model(inputs):
+  return tf.matmul(inputs, W) + b
