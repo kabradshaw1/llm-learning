@@ -16,3 +16,13 @@ tab completion in ipython is interesting.  It pulls up lists of imports, if you 
 *Warning?
 str.*find*?
 ```
+Ctrl-a: move cursor to beginning of line
+Ctrl-e: move cursor to end of the line
+Ctrl-b: move cursor back one character
+Ctrl-f: move cursor forward one character
+Ctrl-d: delete next character in line
+Ctrl-k: cut test from cursor to end of line
+Ctrl-u: Cut text from beginning of line to cursor
+Ctrl-p: Access previous command in history
+Ctrl-n: Access next command in history
+Ctrl-r Reverse-search through command history
