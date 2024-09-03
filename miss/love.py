@@ -1,4 +1,4 @@
-import study
+import deep.study as study
 import transformers
 import langchain as lg
 
