@@ -14,8 +14,8 @@ inputs = np.vstack((negative_samples, positive_samples)).astype(np.float32)
 targets = np.vstack((np.zeros((num_samples_per_class, 1), dtype="float32"),
   np.ones((num_samples_per_class, 1), dtype="float32")))
 
-plt.scatter(inputs[:, 0], inputs[:, 1], c=targets[:, 0])
-plt.show()
+# plt.scatter(inputs[:, 0], inputs[:, 1], c=targets[:, 0])
+# plt.show()
 
 input_dim = 2
 output_dim = 1
@@ -24,3 +24,17 @@ b = tf.Variable(initial_value=tf.zeros(shape=(output_dim,)))
 
 def model(inputs):
   return tf.matmul(inputs, W) + b
+
+def square_loss(targets, predictions):
+  per_sample_losses = tf.square(targets - predictions)
+  return tf.reduce_mean(per_sample_losses)
+
+learning_rate = 0.1
+def training_step(inputs, targets):
+  with tf.GradientTape() as tape:
+    predictions = model(inputs)
+    loss = square_loss(targets, predictions)
+  grad_W, grad_b = tape.gradient(loss, [W, b])
+  W.assign_sub(grad_W * learning_rate)
+  b.assign_sub(grad_b * learning_rate)
+  return loss
