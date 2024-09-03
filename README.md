@@ -11,7 +11,8 @@ def square(a):
     """Return the sqaure root of a."""
     return a ** 2
 ```
-
-```bash
-
+tab completion in ipython is interesting.  It pulls up lists of imports, if you put import.  you can do wildcards in order to find autocomplete options at the end such as:
+```ipython
+*Warning?
+str.*find*?
 ```
