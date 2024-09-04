@@ -37,3 +37,5 @@ L = []
 for n in range(1000):
   L.append(n ** 2)
 ```
+
+We are going over a varity of uses for ipython's In and Out objects.
