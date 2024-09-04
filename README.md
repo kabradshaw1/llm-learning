@@ -38,4 +38,9 @@ for n in range(1000):
   L.append(n ** 2)
 ```
 
-We are going over a varity of uses for ipython's In and Out objects.
+We are going over a varity of uses for ipython's In and Out objects.  We are learning that _ can retreive the last output and __ will go back 2.
+
+```bash
+%history -n 1-3
+```
+This will print your inputs for In[n] where n is the range, in this example 1-3
