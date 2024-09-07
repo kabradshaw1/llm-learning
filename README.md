@@ -44,3 +44,8 @@ We are going over a varity of uses for ipython's In and Out objects.  We are lea
 %history -n 1-3
 ```
 This will print your inputs for In[n] where n is the range, in this example 1-3
+
+The ipython shell can add ! to a command such as !pwd to do the zsh commands.
+
+ls works without !ls, but it does require ! in order to do contents = !ls or directory = !pwd.  These are 
+of type IPython.utils.text.SList.  You can see this by print(directory)
