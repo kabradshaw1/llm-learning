@@ -48,4 +48,12 @@ This will print your inputs for In[n] where n is the range, in this example 1-3
 The ipython shell can add ! to a command such as !pwd to do the zsh commands.
 
 ls works without !ls, but it does require ! in order to do contents = !ls or directory = !pwd.  These are 
-of type IPython.utils.text.SList.  You can see this by print(directory)
+of type IPython.utils.text.SList.  You can see this by print(directory).  This is a lot like a python list, but it has some additonal functionality, such as grep and fields method and the s, nm p properties that allow you to search, filter, and display the results in convenent ways.  You can read about this in IPython's build-in help features.
+
+You can also pass variables from the IPython to the zsh by using {}.  
+
+```IPython
+message = "hello from python"
+!echo {message}
+```
+
