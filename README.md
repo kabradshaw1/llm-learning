@@ -63,3 +63,6 @@ You can change the amount of information displayed in errors with these commands
 ```
 
 The debugger for ipython lets you step through the function 
+
+## Deep Learning Book
+
