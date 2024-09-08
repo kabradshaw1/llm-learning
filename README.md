@@ -56,4 +56,10 @@ You can also pass variables from the IPython to the zsh by using {}.
 message = "hello from python"
 !echo {message}
 ```
+You can change the amount of information displayed in errors with these commands:
+```IPython
+%xmode Verbose
+%xmode Plain
+```
 
+The debugger for ipython lets you step through the function 
